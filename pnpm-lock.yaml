@@ -98,6 +98,9 @@ importers:
       framer-motion:
         specifier: ^10.18.0
         version: 10.18.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      keen-slider:
+        specifier: ^6.8.6
+        version: 6.8.6
       lucide-react:
         specifier: ^0.312.0
         version: 0.312.0(react@18.2.0)
@@ -122,6 +125,9 @@ importers:
       react-router-dom:
         specifier: ^6.21.3
         version: 6.22.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      react-tsparticles:
+        specifier: ^2.12.2
+        version: 2.12.2(react@18.2.0)
       recharts:
         specifier: ^2.12.2
         version: 2.12.3(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
@@ -2128,6 +2134,9 @@ packages:
     engines: {node: '>=6'}
     hasBin: true
 
+  keen-slider@6.8.6:
+    resolution: {integrity: sha512-dcEQ7GDBpCjUQA8XZeWh3oBBLLmyn8aoeIQFGL/NTVkoEOsmlnXqA4QykUm/SncolAZYGsEk/PfUhLZ7mwMM2w==}
+
   keyv@4.5.4:
     resolution: {integrity: sha512-oxVHkHR/EJf2CNXnWxRLW6mg7JyCCUcG0DtEGmL2ctUo1PNTin1PUil+r/+4r5MpVgC/fn1kjsx7mjSujKqIpw==}
 
@@ -2444,6 +2453,12 @@ packages:
       react: '>=16.6.0'
       react-dom: '>=16.6.0'
 
+  react-tsparticles@2.12.2:
+    resolution: {integrity: sha512-/nrEbyL8UROXKIMXe+f+LZN2ckvkwV2Qa+GGe/H26oEIc+wq/ybSG9REDwQiSt2OaDQGu0MwmA4BKmkL6wAWcA==}
+    deprecated: '@tsparticles/react is the new version, please use that'
+    peerDependencies:
+      react: '>=16'
+
   react@18.2.0:
     resolution: {integrity: sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==}
     engines: {node: '>=0.10.0'}
@@ -2610,6 +2625,10 @@ packages:
 
   tslib@2.6.2:
     resolution: {integrity: sha512-AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==}
+
+  tsparticles-engine@2.12.0:
+    resolution: {integrity: sha512-ZjDIYex6jBJ4iMc9+z0uPe7SgBnmb6l+EJm83MPIsOny9lPpetMsnw/8YJ3xdxn8hV+S3myTpTN1CkOVmFv0QQ==}
+    deprecated: starting from tsparticles v3 the packages are now moved to @tsparticles/package-name instead of tsparticles-package-name
 
   type-check@0.4.0:
     resolution: {integrity: sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew==}
@@ -4712,6 +4731,8 @@ snapshots:
 
   json5@2.2.3: {}
 
+  keen-slider@6.8.6: {}
+
   keyv@4.5.4:
     dependencies:
       json-buffer: 3.0.1
@@ -4981,6 +5002,11 @@ snapshots:
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
 
+  react-tsparticles@2.12.2(react@18.2.0):
+    dependencies:
+      react: 18.2.0
+      tsparticles-engine: 2.12.0
+
   react@18.2.0:
     dependencies:
       loose-envify: 1.4.0
@@ -5175,6 +5201,8 @@ snapshots:
   ts-interface-checker@0.1.13: {}
 
   tslib@2.6.2: {}
+
+  tsparticles-engine@2.12.0: {}
 
   type-check@0.4.0:
     dependencies:
