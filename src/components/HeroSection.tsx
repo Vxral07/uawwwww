@@ -13,7 +13,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
         {/* Left Section */}
         <div className="flex flex-col w-[30%] ml-20 max-md:ml-0 max-md:w-full">
           {/* Title */}
-          <div className="self-stretch text-4xl ml-5 mt-4 font-poppins tracking-normal leading-6 text-cyan-500 max-md:mt-10 max-md:max-w-full max-md:text-4xl">
+          <div className="self-stretch text-4xl ml-5 mt-4 font-poppins font-medium tracking-normal leading-6 text-cyan-500 max-md:mt-10 max-md:max-w-full max-md:text-4xl">
             <span className="text-white">{highlightedText} </span>
             {title}
           </div>

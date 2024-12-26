@@ -8,7 +8,8 @@ const tieups = [
   "ib1.png",
   "uqudo1.png",
   "ir1.png",
-  "sp1.png",
+  "Untitled-1.png",
+  "2.png",
   "six1.png",
 ];
 

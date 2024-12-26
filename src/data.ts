@@ -46,61 +46,56 @@ export const footerLinks = [
 export const servicesData = {
   services: [
     {
-      imageSrc:
-        "https://cdn.builder.io/api/v1/image/assets/TEMP/2525e78dd58f795e93b9219434fbc49b290ee54176b3cd8821c6a7d618625bbd",
-      title: " Advising on Financial Products",
+      mediaSrc: "/financial product advising 2.mp4",
+      title: "Advising on Financial Products",
       description:
         "Receive expert guidance on a wide range of financial products, carefully tailored to align with your investment objectives, risk tolerance, and legacy planning requirements.",
-      imageAlt: "Financial Product Advising illustration",
+      mediaAlt: "Financial Product Advising illustration",
+      isVideo: true, // Specify it's a video
     },
     {
-      imageSrc:
-        "https://cdn.builder.io/api/v1/image/assets/TEMP/81fd9cc7fc1513c5f44c11150545a25f78f520b7db8dc7ac105e8312827bb822",
-      title: " Arranging Custody",
+      mediaSrc: "/Custody Arrangement gif.mp4",
+      title: "Arranging Custody",
       description:
         "Ensure the secure and efficient custody of your assets through trusted custodial arrangements and state-of-the-art reporting, giving you peace of mind.",
-      imageAlt: "Custody Arrangement illustration",
+      mediaAlt: "Custody Arrangement illustration",
+      isVideo: true,
     },
     {
-      imageSrc:
-        "https://cdn.builder.io/api/v1/image/assets/TEMP/a3dc8383715902132c410ca736336180185eff88c1db1b9c8cd1ff2731856d6f",
+      mediaSrc: "/Deal Arrangement gif.mp4",
       title: "Arranging Deals in Investments",
       description:
         "Explore exclusive opportunities with expertly arranged investment deals, spanning private equity, structured products, and global market access.",
-
-      imageAlt: "Deal Arrangement illustration",
+      mediaAlt: "Deal Arrangement illustration",
+      isVideo: true,
     },
     {
-      imageSrc:
-        "https://cdn.builder.io/api/v1/image/assets/TEMP/f1df1aa9ea28a016fbc97346eab5dc035edef7f8e06e75ec39e84b1a188462fe",
-      title: " Managing Assets",
+      mediaSrc: "/Asset management gif.mp4",
+      title: "Managing Assets",
       description:
-        "Entrust your portfolio to our seasoned team, who implement a disciplined approach to asset allocation, balancing growth potential with prudent risk management..", 
-
-
-      imageAlt: "Ethical investing illustration",
+        "Entrust your portfolio to our seasoned team, who implement a disciplined approach to asset allocation, balancing growth potential with prudent risk management.",
+      mediaAlt: "Ethical investing illustration",
+      isVideo: true,
     },
     {
-      imageSrc:
-        "https://cdn.builder.io/api/v1/image/assets/TEMP/3833f043b9826ef0781e1f9551ee63e29311cf3c8c095c6406a12393b43329f6",
+      mediaSrc: "/Highlight ethical and sustainable investing practices gif.mp4",
       title: "Arranging Credit & Advising on Credit",
       description:
         "Access personalized credit solutions and professional advice for structuring loans and credit facilities, ensuring liquidity while safeguarding your long-term goals.",
-
-      imageAlt: "Portfolio Management illustration",
+      mediaAlt: "Portfolio Management illustration",
+      isVideo: true,
     },
     {
-      imageSrc:
-        "https://cdn.builder.io/api/v1/image/assets/TEMP/3833f043b9826ef0781e1f9551ee63e29311cf3c8c095c6406a12393b43329f6",
+      mediaSrc: "/Emphasize personalized service gif.mp4",
       title: "Legacy Planning & Family Office Management",
       description:
-        "Comprehensive solutions to manage your legacy and family office requirements, ensuring that your wealth continues to serve future generations seamlessly.", 
-
-
-      imageAlt: "Portfolio Management illustration",
+        "Comprehensive solutions to manage your legacy and family office requirements, ensuring that your wealth continues to serve future generations seamlessly.",
+      mediaAlt: "Portfolio Management illustration",
+      isVideo: true,
     },
   ],
 };
+
 
 
 

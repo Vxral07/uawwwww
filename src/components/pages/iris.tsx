@@ -296,9 +296,8 @@ const Iris = () => {
               <div className="absolute inset-0 w-full h-full  [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div>
             </div>
           </div>
-          <p className=" max-w-full mt-4  font-poppins text-base leading-relaxed text-secondary text-white">
-            Uncover Your Ethical Investing Journey: Explore Nuqi's Universe of
-            4000+ Ethical Global & Indian Stocks | ETF's
+          <p className=" max-w-full mt-4  font-poppins text-lg leading-relaxed text-secondary text-white">
+            Invest ethically with IRIS
           </p>
         </div>
       </div>

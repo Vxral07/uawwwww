@@ -10,10 +10,10 @@ export const ServicesSection: React.FC = () => {
   return (
     <div className="rounded-none w-full max-w-[1200px] mx-auto relative">
       {/* Header */}
-      <h2 className="text-4xl font-poppins text-cyan-500 ml-3  mt-16 text-left">
-        Services
+      <h2 className="text-4xl font-poppins text-cyan-500 ml-3 mt-16 text-left">
+        Nuqi prive Offerings
       </h2>
-      
+
       {/* Swiper Component */}
       <Swiper
         modules={[Autoplay]} // Enable Autoplay
@@ -37,10 +37,11 @@ export const ServicesSection: React.FC = () => {
         {servicesData.services.map((service, index) => (
           <SwiperSlide key={index}>
             <ServiceCard
-              imageSrc={service.imageSrc}
+              mediaSrc={service.mediaSrc}
               title={service.title}
               description={service.description}
-              imageAlt={service.imageAlt}
+              mediaAlt={service.mediaAlt}
+              isVideo={service.isVideo}
             />
           </SwiperSlide>
         ))}

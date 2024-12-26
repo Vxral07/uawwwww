@@ -40,19 +40,19 @@ const features: InvestmentFeature[] = [
 
 export const InvestmentFeatures: React.FC = () => {
   return (
-    <div className="py-20 px-10 max-md:px-5">
-      <div className="flex gap-8 lg:pl-16 items-center max-md:flex-col">
+    <div className=" px-10 max-md:px-5">
+      <div className="grid lg:grid-cols-2 gap-9 lg:gap-0 items-center max-md:flex-col">
         {/* Image Section */}
-        <div className="w-[50%] max-w-[600px] h-full  flex justify-center items-center max-md:w-full">
+        <div className="flex justify-center items-center">
           <img
             src="/Group 1171275219.png"
             alt="Investment Features"
-            className="h-full w-auto rounded-lg object-contain"
+            className="h-auto w-full max-w-[900px] rounded-lg object-contain"
           />
         </div>
 
         {/* Feature Cards Section */}
-        <div className="w-[70%] flex flex-col gap-3 max-md:w-full">
+        <div className="flex flex-col gap-8 lg:gap-1">
           {features.map((feature, index) => (
             <FeatureCard
               key={index}
@@ -66,3 +66,4 @@ export const InvestmentFeatures: React.FC = () => {
     </div>
   );
 };
+

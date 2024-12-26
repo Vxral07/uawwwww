@@ -8,7 +8,7 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({
   readMoreLink
 }) => {
   return (
-    <div className="flex overflow-hidden flex-col border border-solid border-zinc-800 rounded-[30px]">
+    <div className="flex overflow-hidden flex-col border border-solid  border-zinc-800 rounded-[30px]">
       <div className="flex relative flex-col w-full aspect-[0.833]">
         <img
           loading="lazy"

@@ -81,6 +81,8 @@ export interface FeatureCardProps {
     description: string;
     index: number;
     basket: string;
+    onOpen?: () => void; // Add this
+    onModalToggle: (isOpen: boolean) => void;
   }
   
   export interface LearnMoreButtonProps {

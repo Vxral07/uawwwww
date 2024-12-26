@@ -1,7 +1,53 @@
-
-import React from "react";
-import Marquee from "react-fast-marquee";
+import React, { useState } from "react";
+import { useKeenSlider, KeenSliderInstance } from "keen-slider/react";
+import "keen-slider/keen-slider.min.css";
 import { PortfolioCard } from "./PortfolioCard";
+
+// Extend KeenSliderInstance to include custom autoplay methods
+interface ExtendedKeenSliderInstance extends KeenSliderInstance {
+  startAutoplay?: () => void;
+  stopAutoplay?: () => void;
+}
+
+// Autoplay Plugin with Pause/Resume Functionality
+function Autoplay({ delay = 2000 }: { delay?: number }) {
+  return (slider: ExtendedKeenSliderInstance) => {
+    let timeout: any;
+    let mouseOver = false;
+
+    function clearNextTimeout() {
+      clearTimeout(timeout);
+    }
+
+    function nextTimeout() {
+      clearTimeout(timeout);
+      if (mouseOver) return;
+      timeout = setTimeout(() => {
+        slider.next();
+      }, delay);
+    }
+
+    slider.on("created", () => {
+      slider.container.addEventListener("mouseover", () => {
+        mouseOver = true;
+        clearNextTimeout();
+      });
+      slider.container.addEventListener("mouseout", () => {
+        mouseOver = false;
+        nextTimeout();
+      });
+      nextTimeout();
+    });
+
+    slider.on("dragStarted", clearNextTimeout);
+    slider.on("animationEnded", nextTimeout);
+    slider.on("updated", nextTimeout);
+
+    // Add custom autoplay methods
+    slider.startAutoplay = () => nextTimeout();
+    slider.stopAutoplay = () => clearNextTimeout();
+  };
+}
 
 const portfolioData = [
   {
@@ -34,39 +80,76 @@ const portfolioData = [
   },
 ];
 
-
 export const PortfolioGrid: React.FC = () => {
+  const [sliderInstance, setSliderInstance] =
+    useState<ExtendedKeenSliderInstance | null>(null);
+
+  const [ref] = useKeenSlider<HTMLDivElement>(
+    {
+      loop: true,
+      breakpoints: {
+        "(min-width: 768px)": {
+          slides: {
+            perView: 2, // Show 2 slides per view on tablets
+            spacing: 15,
+          },
+        },
+        "(min-width: 1000px)": {
+          slides: {
+            perView: 3, // Show 3 slides per view on desktops
+            spacing: 0,
+          },
+        },
+      },
+      slides: {
+        perView: 1, // Show 1 slide per view on mobile
+        spacing: 10,
+      },
+      created: (slider) => setSliderInstance(slider),
+    },
+    [Autoplay({ delay: 2000 })]
+  );
+
+  const handleModalToggle = (isOpen: boolean) => {
+    if (sliderInstance) {
+      if (isOpen) {
+        sliderInstance.stopAutoplay?.(); // Pause autoplay
+      } else {
+        sliderInstance.startAutoplay?.(); // Resume autoplay
+      }
+    }
+  };
+
   return (
-    <div className="flex flex-col -mt-10 items-center py-20 bg-black text-white">
+    <div className="flex flex-col items-center py-20 bg-black text-white">
       {/* Section Header */}
-      <h1 className="mb-5 text-center font-poppins tracking-wide leading-8 text-3xl pb-1  sm:text-4xl lg:text-4xl">
+      <h1 className="mb-5 text-center font-poppins tracking-wide leading-8 text-3xl pb-1 sm:text-4xl lg:text-4xl">
         <span className="text-white">Nuqi</span>{" "}
         <span className="text-white">Global</span>{" "}
-        <span className="text-white"></span>{" "}
-        <span className="text-cyan-500"> Curated Equity Portfolios(CEP)</span>
+        <span className="text-white">CEP</span>{" "}
+        <span className="text-cyan-500">(Curated Equity Portfolios)</span>
       </h1>
 
       <p className="max-w-3xl text-center font-poppins tracking-wide leading-6 lg:text-lg text-[#b3b3b3] mb-2">
-        Our collaborations with esteemed financial institutions and regulatory authorities underscore our unwavering commitment to security and responsible financial practices, providing a trusted and reliable environment for managing your investments.
+        At NUQI, our team of seasoned investment professionals crafts a diverse
+        range of investment themes, seamlessly leading to Curated Equity
+        Portfolios tailored to align with distinct risk appetites and financial
+        objectives.
       </p>
 
-      {/* Grid Layout */}
-      {/* <Marquee>
-        <div className="flex overflow-x-auto gap-8 px-5 py-10">
-          {portfolioData.map((portfolio, index) => (
-            <PortfolioCard key={index} index={index} {...portfolio} />
-          ))}
-        </div>
-      </Marquee> */}
-      <Marquee speed={30} gradient={false} pauseOnHover={true}>
-        <div className="flex gap-8 px-5 py-10 w-full">
-          {portfolioData.map((portfolio, index) => (
-            <div key={index} className="flex-shrink-0 w-[250px] sm:w-[300px] md:w-[350px] lg:w-[400px]">
-              <PortfolioCard {...portfolio} />
-            </div>
-          ))}
-        </div>
-      </Marquee>
+      {/* Carousel Layout */}
+      <div ref={ref} className="keen-slider w-full px-4 lg:px-20 py-6">
+        {portfolioData.map((portfolio, index) => (
+          <div key={index} className="keen-slider__slide">
+            <PortfolioCard
+              key={index}
+              index={index}
+              {...portfolio}
+              onModalToggle={handleModalToggle}
+            />
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

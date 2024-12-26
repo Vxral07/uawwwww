@@ -40,7 +40,8 @@ export const News: React.FC = () => {
         <span className="text-white">Nuqi</span> in the News
       </h2>
 
-      <div className="flex gap-4 max-md:flex-wrap rounded-[60px]">
+      {/* News Cards */}
+      <div className="flex  justify-center gap-6 rounded-[60px]">
         {newsData.map((news, index) => (
           <NewsCard
             key={index}
@@ -54,3 +55,4 @@ export const News: React.FC = () => {
     </div>
   );
 };
+
