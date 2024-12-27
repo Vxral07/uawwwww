@@ -40,16 +40,19 @@ export const News: React.FC = () => {
         <span className="text-white">Nuqi</span> in the News
       </h2>
 
-      {/* News Cards */}
-      <div className="flex  justify-center gap-6 rounded-[60px]">
+      {/* News Grid */}
+      <div className="grid max-md:flex-wrap md:grid-cols-2 md:gap-6 lg:grid-cols-4 lg:gap-4 rounded-[60px]">
         {newsData.map((news, index) => (
-          <NewsCard
-            key={index}
-            imageSrc={news.imageSrc}
-            title={news.title}
-            imageAlt={news.imageAlt}
-            link={news.link}
-          />
+          <div className="flex justify-center">
+            <NewsCard
+              key={index}
+              imageSrc={news.imageSrc}
+              title={news.title}
+              imageAlt={news.imageAlt}
+              link={news.link}
+              className="max-w-sm w-full" // Ensures consistent card size
+            />
+          </div>
         ))}
       </div>
     </div>

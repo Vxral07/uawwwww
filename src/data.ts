@@ -46,7 +46,7 @@ export const footerLinks = [
 export const servicesData = {
   services: [
     {
-      mediaSrc: "/financial product advising 2.mp4",
+      mediaSrc: "/financial product advising 2.gif",
       title: "Advising on Financial Products",
       description:
         "Receive expert guidance on a wide range of financial products, carefully tailored to align with your investment objectives, risk tolerance, and legacy planning requirements.",
@@ -54,7 +54,7 @@ export const servicesData = {
       isVideo: true, // Specify it's a video
     },
     {
-      mediaSrc: "/Custody Arrangement gif.mp4",
+      mediaSrc: "/Custody Arrangement gif.gif",
       title: "Arranging Custody",
       description:
         "Ensure the secure and efficient custody of your assets through trusted custodial arrangements and state-of-the-art reporting, giving you peace of mind.",
@@ -62,7 +62,7 @@ export const servicesData = {
       isVideo: true,
     },
     {
-      mediaSrc: "/Deal Arrangement gif.mp4",
+      mediaSrc: "/Deal Arrangement gif.gif",
       title: "Arranging Deals in Investments",
       description:
         "Explore exclusive opportunities with expertly arranged investment deals, spanning private equity, structured products, and global market access.",
@@ -70,7 +70,7 @@ export const servicesData = {
       isVideo: true,
     },
     {
-      mediaSrc: "/Asset management gif.mp4",
+      mediaSrc: "/Asset management gif.gif",
       title: "Managing Assets",
       description:
         "Entrust your portfolio to our seasoned team, who implement a disciplined approach to asset allocation, balancing growth potential with prudent risk management.",
@@ -78,7 +78,7 @@ export const servicesData = {
       isVideo: true,
     },
     {
-      mediaSrc: "/Highlight ethical and sustainable investing practices gif.mp4",
+      mediaSrc: "/Highlight ethical and sustainable investing practices gif.gif",
       title: "Arranging Credit & Advising on Credit",
       description:
         "Access personalized credit solutions and professional advice for structuring loans and credit facilities, ensuring liquidity while safeguarding your long-term goals.",
@@ -86,7 +86,7 @@ export const servicesData = {
       isVideo: true,
     },
     {
-      mediaSrc: "/Emphasize personalized service gif.mp4",
+      mediaSrc: "/Emphasize personalized service gif.gif",
       title: "Legacy Planning & Family Office Management",
       description:
         "Comprehensive solutions to manage your legacy and family office requirements, ensuring that your wealth continues to serve future generations seamlessly.",

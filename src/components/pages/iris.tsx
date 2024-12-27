@@ -303,24 +303,25 @@ const Iris = () => {
       </div>
       <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
         <div className="max-w-3xl mx-auto text-center lg:text-left">
-          <h2 className="text-xl  font-poppins sm:text-4xl lg:text-3xl font-bold leading-tight bg-gradient-to-r text-cyan-400 sm:text-center mt-10 lg:ml-0">
+          <h2 className="text-xl  font-poppins sm:text-4xl lg:text-3xl font-medium leading-tight bg-gradient-to-r text-cyan-400 sm:text-center mt-10 lg:ml-0">
             <span className="text-white ">Trending</span> Ethical Stocks
           </h2>
         </div>
       </div>
 
-
-      <div className=" self-center  max-w-screen-lg font-poppins lg:max-w-screen-xl border-2 border-cyan-400 bg-black p-6 rounded-3xl sm:mx-6 lg:mx-20 mt-10 hover:shadow-[inset_0_0_20px_10px_rgba(0,255,255,0.7)] transition-shadow duration-300 ease-in-out">
-        <h4 className="text-left sm:text-center lg:text-left ml-7 text-lg font-bold leading-tight text-white sm:text-2xl lg:text-xl mt-2">
-          Most Active
-        </h4>
-        <p className="max-w-full font-poppins mt-3 text-base leading-relaxed text-gray-300 sm:text-center lg:text-left sm:text-lg lg:text-base px-4">
-          Stay ahead of the market by tracking ethically aligned stocks with
-          the highest trading volumes. Nuqi Wealth allows you to monitor
-          global and local stocks that are actively traded while ensuring
-          they meet ethical investment criteria.
-        </p>
-      </div>
+      <div className="flex w-full justify-center items-center">      
+        <div className=" self-center  font-poppins lg:max-w-screen-xl border-2 border-cyan-400 bg-black p-6 rounded-3xl sm:mx-6 lg:mx-36 mt-10 hover:shadow-[inset_0_0_20px_10px_rgba(0,255,255,0.7)] transition-shadow duration-300 ease-in-out">
+          <h4 className="text-left sm:text-center lg:text-left ml-7 text-lg font-bold leading-tight text-white sm:text-2xl lg:text-xl mt-2">
+            Most Active
+          </h4>
+          <p className="max-w-full font-poppins mt-3 text-base leading-relaxed text-gray-300 sm:text-center lg:text-left sm:text-lg lg:text-base px-4">
+            Stay ahead of the market by tracking ethically aligned stocks with
+            the highest trading volumes. Nuqi Wealth allows you to monitor
+            global and local stocks that are actively traded while ensuring
+            they meet ethical investment criteria.
+          </p>
+        </div>
+      </div> 
 
 
       <div className="flex flex-wrap  gap-4 p-4 bg-black rounded-lg shadow-md ml-10 mt-5">

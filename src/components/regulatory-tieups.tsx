@@ -8,8 +8,8 @@ const tieups = [
   "ib1.png",
   "uqudo1.png",
   "ir1.png",
-  "Untitled-1.png",
-  "2.png",
+  "tmp_a0c8cabd-f247-409e-bc36-a320f12077cb.png",
+  "tmp_76500cfd-7fc0-4ad4-b82c-d5cc3dd3803e.png",
   "six1.png",
 ];
 
@@ -35,7 +35,7 @@ const RegulatoryTieups = () => {
               <div key={index} className="flex mb-16 min-w-52 justify-center">
                 <img
                   src={`/tieups/${image}`}
-                  className=" h-[1.5rem] mx-5 object-cover"
+                  className=" h-[2.5rem] mx-5 w-70 object-cover"
                 />
               </div>
             ))}

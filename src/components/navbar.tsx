@@ -277,7 +277,7 @@ export function Navbar() {
         </div>
 
         {/* Right Section (Sign Up / Login / Country Dropdown) */}
-        <div className="flex items-center space-x-2 mt-2 lg:mt-0">
+        <div className="flex items-center space-x-2 mt-2 mr-9 lg:mt-0">
           <button className="px-3 py-2 text-sm font-semibold text-white bg-cyan-400 rounded-3xl hover:opacity-90">
             Sign Up
           </button>

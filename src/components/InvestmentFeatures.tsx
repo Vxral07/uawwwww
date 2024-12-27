@@ -45,14 +45,14 @@ export const InvestmentFeatures: React.FC = () => {
         {/* Image Section */}
         <div className="flex justify-center items-center">
           <img
-            src="/Group 1171275219.png"
+            src="/home screen page gif.gif"
             alt="Investment Features"
-            className="h-auto w-full max-w-[900px] rounded-lg object-contain"
+            className="h-auto w-full max-w-[650px] rounded-lg object-contain"
           />
         </div>
 
         {/* Feature Cards Section */}
-        <div className="flex flex-col gap-8 lg:gap-1">
+        <div className="flex flex-col gap-8 lg:gap-8">
           {features.map((feature, index) => (
             <FeatureCard
               key={index}

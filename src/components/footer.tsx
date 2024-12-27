@@ -95,6 +95,9 @@ export function Footer() {
                     <a href="/Privacy" className="text-white">
                         Legal
                     </a>
+                    <a href="/About" className="text-white">
+                        About
+                    </a>
                     <a href="/partnership" className="text-white">
                         Partnership
                     </a>

@@ -92,7 +92,7 @@ export const PrivacyPolicy: React.FC = () => {
   
           {/* Content Section */}
           <div className="flex flex-col w-[75%] px-20 text-justify max-md:w-full">
-            <div className="self-start text-3xl font-poppins mr-5 font-semibold text-cyan-400 mb-6 max-md:text-2xl">
+            <div className="self-start text-3xl font-poppins mr-5 text-cyan-400 mb-6 max-md:text-2xl">
               Privacy Policy
             </div>
             {policySections.map((section, index) => (

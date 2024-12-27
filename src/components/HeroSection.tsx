@@ -9,7 +9,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 }) => {
   return (
     <div className="rounded-none">
-      <div className="flex gap-10 ml-5 items-center max-md:flex-col">
+      <div className="flex gap-10 ml-5 lg:ml-28 mt-10 items-center max-md:flex-col">
         {/* Left Section */}
         <div className="flex flex-col w-[30%] ml-20 max-md:ml-0 max-md:w-full">
           {/* Title */}

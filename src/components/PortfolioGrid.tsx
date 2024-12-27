@@ -138,7 +138,7 @@ export const PortfolioGrid: React.FC = () => {
       </p>
 
       {/* Carousel Layout */}
-      <div ref={ref} className="keen-slider w-full px-4 lg:px-20 py-6">
+      <div ref={ref} className="keen-slider w-full px-4 lg:px-28 py-6">
         {portfolioData.map((portfolio, index) => (
           <div key={index} className="keen-slider__slide">
             <PortfolioCard

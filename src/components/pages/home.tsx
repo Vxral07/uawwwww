@@ -29,13 +29,14 @@ const Home = () => {
       {/* <FeatureCard /> */}
       <InvestmentFeatures />
       {/* Add id to NuqiPrive section */}
-      <section id="nuqiprive">
-        <NuqiPrive />
-      </section>
-      <ServicesSection />
       {/* <GlobalMarketSection /> */}
       <section id="advisory">
         <PortfolioGrid />
+      </section>
+      <ServicesSection />
+      {/* <GlobalMarketSection /> */}
+      <section id="nuqiprive">
+        <NuqiPrive />
       </section>
       {/* <AboutNuqi title={""} description={""}/> */}
       <FAQSection />

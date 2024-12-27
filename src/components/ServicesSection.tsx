@@ -11,7 +11,8 @@ export const ServicesSection: React.FC = () => {
     <div className="rounded-none w-full max-w-[1200px] mx-auto relative">
       {/* Header */}
       <h2 className="text-4xl font-poppins text-cyan-500 ml-3 mt-16 text-left">
-        Nuqi prive Offerings
+      <span className="text-white">Nuqi</span>{" "} 
+      <span className="text-cyan-500">prive offerings</span>{" "}
       </h2>
 
       {/* Swiper Component */}

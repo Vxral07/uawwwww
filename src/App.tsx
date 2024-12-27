@@ -17,6 +17,7 @@ import Terms from "./components/pages/terms";
 import { ContactsPage } from "./components/pages/ContactPage";
 import Ethosphere from "./components/pages/ethosphere";
 import Prive from "./components/pages/prive";
+import Partnership from "./components/pages/partnership";
 // import {Hnis} from "./components/pages/hnis";
 
 const App = () => {
@@ -38,6 +39,7 @@ const App = () => {
                     <Route path="iris" element={<Iris />} />
                     <Route path="ethosphere" element={<Ethosphere />} />
                     <Route path="ContactsPage" element={<ContactsPage />} />
+                    <Route path="partnership" element={<Partnership />} />
                     {/* <Route path="hnis" element={<Hnis />} /> */}
                 </Route>
                 <Route path="prive" element={<Prive />} />

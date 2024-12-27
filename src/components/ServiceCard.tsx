@@ -22,13 +22,10 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
       {/* Media Section (Video or Image) */}
       <div className="w-full h-48 flex items-center justify-center bg-[#040404] rounded-md mb-4">
         {isVideo ? (
-          <video
+          <img
             src={mediaSrc}
             className="w-full h-full object-contain rounded-md"
-            autoPlay
-            loop
-            muted
-            aria-label={mediaAlt}
+            
           />
         ) : (
           <img
