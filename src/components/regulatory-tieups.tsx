@@ -19,7 +19,7 @@ const RegulatoryTieups = () => {
       <div className="flex flex-col bg-[#0d0d0d] rounded-3xl justify-between items-center w-full">
         <div className="flex flex-col justify-between items-center w-full">
           <div className="flex flex-col gap-4 mb-16">
-            <h1 className="text-center pb-5 mt-10 font-medium tracking-wide leading-6 font-poppins text-3xl sm:text-4xl lg:text-4xl">
+            <h1 className="text-center pb-5 mt-10 font-medium tracking-wide leading-6 font-poppins text-4xl sm:text-4xl lg:text-4xl">
               <span className="text-white">Building</span>{" "}
               <span className="text-cyan-500">trust</span>{" "}
               <span className="text-cyan-500">through</span>{" "}

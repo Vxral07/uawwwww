@@ -4,7 +4,7 @@ import { FAQCard } from "./FAQCard";
 export const FAQSection: React.FC = () => {
   return (
     <div className="text-white -mt-5 px-5">
-      <h1 className="text-center text-4xl font-poppins text-cyan-500 mb-7">
+      <h1 className="text-center pt-16 text-4xl font-poppins text-cyan-500 mb-7">
         FAQs
       </h1>
 

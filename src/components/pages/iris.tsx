@@ -273,7 +273,7 @@ const Iris = () => {
             IRIS
           </h2> */}
           <div className="h-[10rem] w-full  flex flex-col items-center justify-center overflow-hidden rounded-md">
-            <h2 className="text-3xl font-poppins pb-5 font-bold leading-tight tracking-wide text-cyan-400 hover:text-cyan-400 sm:text-4xl lg:text-5xl">
+            <h2 className="text-3xl font-poppins pb-5 font-medium leading-tight tracking-wide text-cyan-400 hover:text-cyan-400 sm:text-4xl lg:text-5xl">
               IRIS
             </h2>
             <div className="w-[40rem] h-10 relative">

@@ -6,7 +6,7 @@ const Hero = () => {
     <div className="container mx-auto justify-center flex flex-col lg:flex-row items-center gap-8 px-5 lg:px-28 py-10 lg:py-1">
       {/* Text + Carousel Section */}
       <div className="flex flex-col items-center lg:items-start text-center lg:text-left lg:w-2/2">
-        <h1 className="text-3xl font-medium text-white tracking-wide max-md:text-xl lg:text-4xl">
+        <h1 className="text-3xl font-poppins text-white tracking-wide max-md:text-xl lg:text-4xl">
           Online platform to invest in:
         </h1>
         <Carousel

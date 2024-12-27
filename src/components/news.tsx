@@ -36,7 +36,7 @@ export const News: React.FC = () => {
   return (
     <div className="flex flex-col mx-5 lg:mx-28 items-center justify-center mt-10">
       {/* Header */}
-      <h2 className="text-3xl text-cyan-400 leading-6 tracking-wide mb-10 text-center lg:text-3xl">
+      <h2 className="text-3xl text-cyan-400 font-poppins leading-6 tracking-wide mb-10 text-center lg:text-4xl">
         <span className="text-white">Nuqi</span> in the News
       </h2>
 
@@ -50,7 +50,7 @@ export const News: React.FC = () => {
               title={news.title}
               imageAlt={news.imageAlt}
               link={news.link}
-              className="max-w-sm w-full" // Ensures consistent card size
+              className="max-w-sm max-sm:mt-5 w-full" // Ensures consistent card size
             />
           </div>
         ))}

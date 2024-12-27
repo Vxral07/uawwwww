@@ -33,11 +33,11 @@ const Home = () => {
       <section id="advisory">
         <PortfolioGrid />
       </section>
-      <ServicesSection />
-      {/* <GlobalMarketSection /> */}
       <section id="nuqiprive">
         <NuqiPrive />
       </section>
+      <ServicesSection />
+      
       {/* <AboutNuqi title={""} description={""}/> */}
       <FAQSection />
       {/* <InvestmentFeaturess/> */}
