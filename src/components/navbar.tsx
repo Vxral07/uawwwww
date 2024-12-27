@@ -265,33 +265,36 @@ export function Navbar() {
 
   return (
     <header className="fixed top-0 w-full z-50 bg-black backdrop-blur-xl bg-opacity-50 border-opacity-50 border-b-[1px] border-[#4d4d4d] shadow-lg">
-      <div className="container mx-auto px-4 py-4 flex items-center justify-between font-poppins flex-wrap">
+      <div className="container mx-auto px-4 py-2 flex items-center justify-between font-poppins">
         {/* Logo */}
         <div className="flex-shrink-0">
           <HomeLogo />
         </div>
 
-        {/* Desktop Navigation */}
+        {/* Desktop Navigation (Visible only on desktop) */}
         <div className="hidden lg:flex flex-grow justify-center">
           <DesktopNavigation />
         </div>
 
-        {/* Right Section (Sign Up / Login / Country Dropdown) */}
-        <div className="flex items-center space-x-2 mt-2 mr-9 lg:mt-0">
-          <button className="px-3 py-2 text-sm font-semibold text-white bg-cyan-400 rounded-3xl hover:opacity-90">
+        {/* Right Section (Sign Up, Login, Country Dropdown, Mobile Navigation) */}
+        <div className="flex items-center space-x-3 lg:space-x-4">
+          {/* Sign Up Button */}
+          <button className="px-2 py-2 ml-2  text-sm font-semibold text-white bg-cyan-400 rounded-xl hover:opacity-90">
             Sign Up
           </button>
-          <button className="px-3 py-2 text-sm font-semibold text-white bg-transparent border border-cyan-400 rounded-3xl hover:bg-cyan-400 hover:text-black">
+
+          {/* Login Button */}
+          <button className="px-4 py-2 text-sm font-semibold text-white bg-transparent border border-cyan-400 rounded-xl hover:bg-cyan-400 hover:text-black">
             Login
           </button>
 
           {/* Country Select Dropdown */}
           <CountrySelect />
-        </div>
 
-        {/* Mobile Navigation */}
-        <div className="lg:hidden mt-3 w-full flex justify-between items-center">
-          <MobileNavigation />
+          {/* Mobile Navigation (Hamburger Menu, visible only on mobile/tablet) */}
+          <div className="lg:hidden">
+            <MobileNavigation />
+          </div>
         </div>
       </div>
     </header>
