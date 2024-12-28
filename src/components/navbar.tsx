@@ -1,4 +1,5 @@
-import { Popover, Transition } from "@headlessui/react";
+
+import { Popover, Transition, } from "@headlessui/react";
 import { Globe, Menu, X } from "lucide-react";
 import { Fragment, ReactNode, useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
@@ -9,6 +10,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "./ui/select"; // Assuming you have a custom Select component
+
 
 // NavItem Component
 function NavItem({
@@ -276,27 +278,74 @@ export function Navbar() {
           <DesktopNavigation />
         </div>
 
-        {/* Right Section (Sign Up, Login, Country Dropdown, Mobile Navigation) */}
+        {/* Right Section */}
         <div className="flex items-center space-x-3 lg:space-x-4 lg:mr-5">
-          {/* Sign Up Button */}
-          <button className="px-2 py-2 ml-2  text-sm font-semibold text-white bg-cyan-400 rounded-xl hover:opacity-90">
-            Sign Up
-          </button>
-
-          {/* Login Button */}
-          <button className="px-4 py-2 text-sm font-semibold text-white bg-transparent border border-cyan-400 rounded-xl hover:bg-cyan-400 hover:text-black">
-            Login
-          </button>
+          {/* User Icon with Dropdown for Mobile */}
+          <div className="lg:hidden relative">
+            <Popover>
+              <Popover.Button>
+                <div className="flex items-center justify-center w-10 h-10 rounded-full bg-black border border-cyan-500 text-white cursor-pointer">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M5.121 17.804A7.938 7.938 0 0112 16c1.739 0 3.33.555 4.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zM4 6h16"
+                    />
+                  </svg>
+                </div>
+              </Popover.Button>
+              <Transition
+                as={Fragment}
+                enter="transition ease-out duration-100"
+                enterFrom="opacity-0 scale-95"
+                enterTo="opacity-100 scale-100"
+                leave="transition ease-in duration-75"
+                leaveFrom="opacity-100 scale-100"
+                leaveTo="opacity-0 scale-95"
+              >
+                <Popover.Panel className="absolute right-0 mt-2 w-40 bg-black text-white rounded-lg shadow-lg">
+                  <div className="flex flex-col">
+                    <button className="px-4 py-2 text-sm hover:bg-cyan-400 hover:text-black">
+                      Log In
+                    </button>
+                    <button className="px-4 py-2 text-sm hover:bg-cyan-400 hover:text-black">
+                      Sign Up
+                    </button>
+                  </div>
+                </Popover.Panel>
+              </Transition>
+            </Popover>
+          </div>
 
           {/* Country Select Dropdown */}
-          <CountrySelect />
+          <div className="flex order-1 lg:order-3 lg:ml-4">
+            <CountrySelect />
+          </div>
 
-          {/* Mobile Navigation (Hamburger Menu, visible only on mobile/tablet) */}
-          <div className="lg:hidden">
+          {/* Mobile Navigation (Hamburger Menu) */}
+          <div className="lg:hidden order-3">
             <MobileNavigation />
+          </div>
+
+          {/* Sign Up & Login for Desktop */}
+          <div className="hidden lg:flex space-x-2 order-2">
+            <button className="px-3 py-2 text-sm font-semibold text-white bg-cyan-400 rounded-xl whitespace-nowrap hover:opacity-90">
+              Sign Up
+            </button>
+            <button className="px-3 py-2 text-sm font-semibold text-white bg-transparent border border-cyan-400 rounded-xl hover:bg-cyan-400 hover:text-black">
+              Login
+            </button>
           </div>
         </div>
       </div>
     </header>
   );
 }
+
